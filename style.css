@@ -1,0 +1,151 @@
+body{
+    animation: bgFade 10s infinite ease-in-out;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #1F1F1F ;
+    box-sizing: border-box;
+    margin: 0;
+    height: 3.5em; 
+    width: 100%; 
+    position: relative;
+    padding: .5rem;
+}
+header a {
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2.5em;
+
+}
+header a:hover {
+    color: #585656;
+}
+
+p{
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h1{
+    color: rgb(255, 255, 255);
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size:7em;
+    margin:0;
+    padding:0;
+    font-stretch:wider;
+}
+h2{
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.fade-container {
+    position: relative;
+    height: 100px;
+    overflow: hidden;
+}
+
+.fade-text {
+    opacity: 0;
+    text-align: center;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 7em;
+    color: white;
+    animation: fadeInOnce 7s ease-in-out forwards;
+}
+
+@keyframes fadeInOnce {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes bgFade {
+    0%   { background-color: #1A1F2B; }  
+    33%  { background-color: #2C3539; }  
+    66%  { background-color: #2C3E50; }  
+    100% { background-color: #1A1F2B; }
+  }
+
+.resume-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #3A4750;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.resume-button:hover {
+    background-color: #4d555a;
+}
+  
+@media (max-width: 768px) {
+    h1 {
+      font-size: 3em;
+    }
+  
+    header a {
+      font-size: 1.5em;
+    }
+  
+    .resume-button {
+      padding: 0.5rem 1rem;
+      font-size: 1em;
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+    }
+  }
+  .about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap; /* So it stacks on smaller screens */
+    margin-top: 1rem;
+}
+
+.about-img {
+    width: 14em;
+    height: auto;
+    border-radius: 10px;
+}
+
+.about-text {
+    max-width: 50em;
+    text-align: left;
+}
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* space between the button and logo */
+    margin-top: 1rem;
+    flex-wrap: wrap; /* so it wraps on small screens */
+}
+
+.linkedin {
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    border-radius: .5em;
+
+}
+.linkedin:hover {
+    transform: scale(1.05);
+}
+
+.section-divider {
+    border-top: 2px solid black;
+    padding-top: 1rem;
+    margin-top: 2rem;
+}
