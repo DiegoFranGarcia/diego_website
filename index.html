@@ -2,7 +2,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        
+        <link rel="icon" href="/images/Coat_of_arms_of_Mexico.svg" type="image/png">
         <title>Diego Garcia</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -29,16 +29,39 @@
                         <a href="images/Diego's Resume.pdf" target="_blank" title="Diego's Resume" class="resume-button">View My Resume</a>
                         <a href="https://www.linkedin.com/in/diego-f-garciaa/" target="_blank">
                             <img src="images/linkedinLogo.png" alt="LinkedIn Profile" width="50" class="linkedin">
+                        <a href="https://github.com/DiegoFranGarcia/" target="_blank">
+                            <img src="images/github_logo.webp" alt="GitHub Profile" width="50" class="linkedin">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <div id="projects">
-
+            <h2>Projects</h2>
+            <p>Section coming soon with all my projects info</p>
         </div>
         <div id="trips">
-
+            <h2>Trips</h2>
+            <p>Section coming soon with all info about trips that I have taken</p>
         </div>
     </body>
+    <footer class="site-footer">
+        <p class="prayer">
+            Lord Jesus Christ, Son of God, have mercy upon me, a sinner
+        </p>
+        <div class="footer-row">
+            <img src="/images/Missouri-Tigers-logo.png" width="60">
+            <img src="/images/raiders_logo.png" width="50">
+            <img src="/images/Royals_logo.png" width="55" height="60">
+        </div>
+        <p>&copy; <span id="year"></span> Diego Garcia. All rights reserved.</p>
+        <div class="footer-links">
+            <a href="#aboutMe">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#trips">Trips</a>
+        </div>
+    </footer>
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>    
 </html>
