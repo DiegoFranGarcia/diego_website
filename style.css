@@ -21,7 +21,7 @@ header a {
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
     color: rgb(255, 255, 255);
     font-weight: bold;
-    font-size: 2.5em;
+    font-size: 2em;
 
 }
 header a:hover {
@@ -32,6 +32,7 @@ p{
     color: rgb(255, 255, 255);
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 h1{
     color: rgb(255, 255, 255);
     font-family: Copperplate, "Copperplate Gothic Light", fantasy;
@@ -83,6 +84,7 @@ h2{
 }
 .resume-button:hover {
     background-color: #4d555a;
+    transform: scale(1.05);
 }
   
 @media (max-width: 768px) {
@@ -144,8 +146,51 @@ h2{
     transform: scale(1.05);
 }
 
-.section-divider {
-    border-top: 2px solid black;
-    padding-top: 1rem;
-    margin-top: 2rem;
+
+.site-footer {
+    background-color: #1F1F1F;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 3rem;
+    border-top: 2px solid #333;
+}
+
+.site-footer p {
+    margin: 0.5rem 0;
+    color: rgb(255, 255, 255);
+}
+
+.footer-links {
+    margin-top: 0.5rem;
+}
+
+.footer-links a {
+    margin: 0 1rem;
+    color: white;
+    text-decoration: none;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #585656;
+}
+
+.footer-row{
+    display: flex;
+    justify-content: center; /* centers content horizontally */
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.prayer{
+    justify-content: center; 
+    font-family:'Fantasy', 'Papyrus';
+    color: whitesmoke;
+
 }
