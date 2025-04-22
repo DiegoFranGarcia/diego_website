@@ -114,7 +114,7 @@ h2{
     align-items: center;
     justify-content: center;
     gap: 2rem;
-    flex-wrap: wrap; /* So it stacks on smaller screens */
+    flex-wrap: wrap; 
     margin-top: 1rem;
 }
 
@@ -131,9 +131,9 @@ h2{
 .button-row {
     display: flex;
     align-items: center;
-    gap: 1rem; /* space between the button and logo */
+    gap: 1rem; 
     margin-top: 1rem;
-    flex-wrap: wrap; /* so it wraps on small screens */
+    flex-wrap: wrap; 
 }
 
 .linkedin {
@@ -181,7 +181,7 @@ h2{
 
 .footer-row{
     display: flex;
-    justify-content: center; /* centers content horizontally */
+    justify-content: center; 
     align-items: center;
     gap: 1rem;
     margin-top: 1rem;
