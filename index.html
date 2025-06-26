@@ -2,7 +2,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="images/Coat_of_arms_of_Mexico.svg" type="image/png">
+        
+        <link rel="icon" href="images/main/Coat_of_arms_of_Mexico.svg" type="image/png">
         <title>Diego Garcia</title>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -18,7 +19,7 @@
         <div id="aboutMe">
             <h2>All about Diego Garcia</h2>
             <div class="about-container">
-                <img src="images/portrait.JPG" alt="Picture of myself" class="about-img">
+                <img src="images/main/portrait.JPG" alt="Picture of myself" class="about-img">
                 <div class="about-text">
                     <p>
                         Hi, I'm Diego Garcia, a Computer Science major at the University of Missouri – Columbia (Mizzou).
@@ -26,11 +27,11 @@
                         Feel free to check out my Projects, Resume, or contact me if you would like to connect.
                     </p>
                     <div class="button-row">
-                        <a href="images/Diego's Resume.pdf" target="_blank" title="Diego's Resume" class="resume-button">View My Resume</a>
+                        <a href="images/main/Diego's Resume.pdf" target="_blank" title="Diego's Resume" class="resume-button">View My Resume</a>
                         <a href="https://www.linkedin.com/in/diego-f-garciaa/" target="_blank">
-                            <img src="images/linkedinLogo.png" alt="LinkedIn Profile" width="50" class="linkedin">
+                            <img src="images/main/linkedinLogo.png" alt="LinkedIn Profile" width="50" class="linkedin">
                         <a href="https://github.com/DiegoFranGarcia/" target="_blank">
-                            <img src="images/github_logo.webp" alt="GitHub Profile" width="50" class="linkedin">
+                            <img src="images/main/github_logo.webp" alt="GitHub Profile" width="50" class="linkedin">
                         </a>
                     </div>
                 </div>
@@ -38,21 +39,60 @@
         </div>
         <div id="projects">
             <h2>Projects</h2>
-            <p>Section coming soon with all my projects info</p>
-        </div>
+            <div>
+                <p>Section coming soon with all my projects info</p>
+            <h3> Trivia Party</h3>
+            <p>
+                Trivia Party is a web application that allows users to create and join trivia games. It features a user-friendly interface, real-time updates, and a variety of trivia categories. 
+            </p>
+    
+       <!-- Trips ---------------------------------------------------------------->
         <div id="trips">
-            <h2>Trips</h2>
-            <p>Section coming soon with all info about trips that I have taken</p>
-        </div>
+        <h2>Trips</h2>
+
+  <!-- Trip card: Las Vegas ---------------------------------------------->
+  <section class="trip-card">
+    <div class="trip-info">
+      <h3>Las Vegas · May 2025</h3>
+      <p>
+        Visited Las Vegas for the first time with my friends. Lost a large
+        chunk of change in the casinos, but had a great time exploring the city
+        and enjoying the nightlife.
+      </p>
+    </div>
+
+    <!-- Slideshow container -->
+    <div class="trip-slideshow" data-interval="3500">
+      <img src="images/vegasimages/vegas_photo1.jpeg" alt="Las Vegas" class="slide active">
+      <img src="images/vegasimages/vegas_photo2.jpeg" alt="Las Vegas" class="slide">
+      <img src="images/vegasimages/vegas_photo3.jpg"  alt="Las Vegas" class="slide">
+      <img src="images/vegasimages/vegas_photo4.jpg"  alt="Las Vegas" class="slide">
+    </div>
+  </section>
+</div>
+<script>
+/* Simple slideshow: cycles through .trip-slideshow elements -------------*/
+document.querySelectorAll('.trip-slideshow').forEach(show => {
+  const slides   = Array.from(show.querySelectorAll('.slide'));
+  const interval = +show.dataset.interval || 4000;
+  let index = 0;
+
+  setInterval(() => {
+    slides[index].classList.remove('active');
+    index = (index + 1) % slides.length;
+    slides[index].classList.add('active');
+  }, interval);
+});
+</script>
     </body>
     <footer class="site-footer">
         <p class="prayer">
             Lord Jesus Christ, Son of God, have mercy upon me, a sinner
         </p>
         <div class="footer-row">
-            <img src="images/Missouri-Tigers-logo.png" width="60">
-            <img src="images/raiders_logo.png" width="50">
-            <img src="images/Royals_logo.png" width="55" height="60">
+            <img src="images/main/Missouri-Tigers-logo.png" width="60">
+            <img src="images/main/raiders_logo.png" width="50">
+            <img src="images/main/Royals_logo.png" width="55" height="60">
         </div>
         <p>&copy; <span id="year"></span> Diego Garcia. All rights reserved.</p>
         <div class="footer-links">

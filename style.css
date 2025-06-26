@@ -31,6 +31,7 @@ header a:hover {
 p{
     color: rgb(255, 255, 255);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:1.3em;
 }
 
 h1{
@@ -44,6 +45,12 @@ h1{
 h2{
     color: rgb(255, 255, 255);
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 2.7em;
+}
+h3{
+    color: rgb(255, 255, 255);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size:2em;
 }
 .fade-container {
     position: relative;
@@ -192,5 +199,55 @@ h2{
     justify-content: center; 
     font-family:'Fantasy', 'Papyrus';
     color: whitesmoke;
+}
 
+/* Trip card layout ------------------------------------------------------*/
+.trip-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;          /* stacks on mobile */
+  margin: 2rem auto;
+  max-width: 90rem;
+}
+
+/* Text column -----------------------------------------------------------*/
+.trip-info {
+  flex: 1 1 300px;
+  min-width: 260px;
+  text-align: left;
+}
+
+/* Slideshow frame -------------------------------------------------------*/
+.trip-slideshow {
+  position: relative;
+  flex: 1 1 300px;
+  max-width: 400px;         /* tweak to taste */
+  aspect-ratio: 4 / 3;      /* keeps consistent height */
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Individual slides -----------------------------------------------------*/
+.trip-slideshow .slide {
+  position: absolute;
+  inset: 0;                 /* full‐frame */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.trip-slideshow .active {
+  opacity: 1;
+}
+
+/* Mobile tweaks ---------------------------------------------------------*/
+@media (max-width: 768px) {
+  .trip-card {
+    flex-direction: column;
+  }
+  .trip-info { text-align: center; }
 }
