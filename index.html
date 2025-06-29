@@ -37,53 +37,95 @@
                 </div>
             </div>
         </div>
+        <!-- Projects ----------------------------------------------------------->
         <div id="projects">
-            <h2>Projects</h2>
-            <div>
-                <p>Section coming soon with all my projects info</p>
-            <h3> Trivia Party</h3>
+        <h2>Projects</h2>
+        <!-- Project card: MLB Predictor --------------------------------------->
+         
+        <!-- Project card: QuizMe --------------------------------------------->
+        <section class="project-card" id="quizme">
+            <!-- Manual-control gallery -->
+            <div class="project-gallery">
+            <button class="proj-arrow proj-prev" aria-label="Previous slide">❮</button>
+
+            <img src="images/quizmeimages/home-page.png"   alt="QuizMe Home"   class="proj-slide active">
+            <img src="images/quizmeimages/create-quiz.png" alt="Create Quiz"  class="proj-slide">
+            <img src="images/quizmeimages/take-quiz.png"   alt="Take Quiz"    class="proj-slide">
+            <img src="images/quizmeimages/results.png"     alt="Results page" class="proj-slide">
+
+            <button class="proj-arrow proj-next" aria-label="Next slide">❯</button>
+            </div>
+            <div class="project-info">
+            <h3>QuizMe</h3>
             <p>
-                Trivia Party is a web application that allows users to create and join trivia games. It features a user-friendly interface, real-time updates, and a variety of trivia categories. 
+                QuizMe is a lightweight quiz-builder I developed with the MERN stack—
+                MongoDB, Express.js, React, and Node.js—that runs entirely in the
+                browser for a single user. It lets you design unlimited quizzes with
+                rich-text questions and multiple answer formats, take them instantly,
+                and receive immediate scores. Every attempt is stored in MongoDB so you
+                can revisit past results and track your progress over time. With a
+                responsive React interface and a clean Express API, QuizMe showcases my
+                ability to craft a focused full-stack app that delivers a streamlined,
+                self-contained learning tool without logins, sharing links, or external
+                services.
             </p>
-    
+            </div>
+        </section>
+        </div>
        <!-- Trips ---------------------------------------------------------------->
         <div id="trips">
         <h2>Trips</h2>
 
-  <!-- Trip card: Las Vegas ---------------------------------------------->
-  <section class="trip-card">
-    <div class="trip-info">
-      <h3>Las Vegas · May 2025</h3>
-      <p>
-        Visited Las Vegas for the first time with my friends. Lost a large
-        chunk of change in the casinos, but had a great time exploring the city
-        and enjoying the nightlife.
-      </p>
-    </div>
+            <!-- Trip card: Las Vegas ---------------------------------------------->
+            <section class="trip-card">
+                <div class="trip-info">
+                <h3>Las Vegas · May 2025</h3>
+                <p>
+                    Visited Las Vegas for the first time with my friends. Lost a large
+                    chunk of change in the casinos, but had a great time exploring the city
+                    and enjoying the nightlife.
+                </p>
+                </div>
 
-    <!-- Slideshow container -->
-    <div class="trip-slideshow" data-interval="3500">
-      <img src="images/vegasimages/vegas_photo1.jpeg" alt="Las Vegas" class="slide active">
-      <img src="images/vegasimages/vegas_photo2.jpeg" alt="Las Vegas" class="slide">
-      <img src="images/vegasimages/vegas_photo3.jpeg"  alt="Las Vegas" class="slide">
-      <img src="images/vegasimages/vegas_photo4.jpeg"  alt="Las Vegas" class="slide">
-    </div>
-  </section>
-</div>
-<script>
-/* Simple slideshow: cycles through .trip-slideshow elements -------------*/
-document.querySelectorAll('.trip-slideshow').forEach(show => {
-  const slides   = Array.from(show.querySelectorAll('.slide'));
-  const interval = +show.dataset.interval || 4000;
-  let index = 0;
+                <!-- Slideshow container -->
+                <div class="trip-slideshow" data-interval="3500">
+                <img src="images/vegasimages/vegas_photo1.jpeg" alt="Las Vegas" class="slide active">
+                <img src="images/vegasimages/vegas_photo2.jpeg" alt="Las Vegas" class="slide">
+                <img src="images/vegasimages/vegas_photo3.jpeg"  alt="Las Vegas" class="slide">
+                <img src="images/vegasimages/vegas_photo4.jpeg"  alt="Las Vegas" class="slide">
+                </div>
+            </section>
+        </div>
+    <script>
+    /* Simple slideshow: cycles through .trip-slideshow elements -------------*/
+    document.querySelectorAll('.trip-slideshow').forEach(show => {
+    const slides   = Array.from(show.querySelectorAll('.slide'));
+    const interval = +show.dataset.interval || 4000;
+    let index = 0;
 
-  setInterval(() => {
-    slides[index].classList.remove('active');
-    index = (index + 1) % slides.length;
-    slides[index].classList.add('active');
-  }, interval);
-});
-</script>
+    setInterval(() => {
+        slides[index].classList.remove('active');
+        index = (index + 1) % slides.length;
+        slides[index].classList.add('active');
+    }, interval);
+    });
+    </script>
+    <script>
+    /* Click-through gallery for every .project-gallery --------------------*/
+    document.querySelectorAll('.project-gallery').forEach(gallery => {
+    const slides = Array.from(gallery.querySelectorAll('.proj-slide'));
+    let idx = 0;
+
+    function go(n) {
+        slides[idx].classList.remove('active');
+        idx = (n + slides.length) % slides.length;
+        slides[idx].classList.add('active');
+    }
+
+    gallery.querySelector('.proj-prev').addEventListener('click', () => go(idx - 1));
+    gallery.querySelector('.proj-next').addEventListener('click', () => go(idx + 1));
+    });
+    </script>
     </body>
     <footer class="site-footer">
         <p class="prayer">
