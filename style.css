@@ -48,8 +48,8 @@ h1{
 }
 h2{
     color: rgb(255, 255, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 2.7em;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+    font-size: 4em;
 }
 h3{
     color: rgb(255, 255, 255);
@@ -276,7 +276,7 @@ h3{
 .project-gallery {
   position: relative;
   flex: 1 1 300px;
-  max-width: 35em;          /* tweak as you like */
+  max-width: 43em;          /* tweak as you like */
   aspect-ratio: 16 / 9;     /* widescreen */
   overflow: hidden;
   border-radius: 10px;
