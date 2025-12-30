@@ -227,7 +227,7 @@ h3{
 .trip-slideshow {
   position: relative;
   flex: 1 1 300px;
-  max-width: 35em;         /* tweak to taste */
+  max-width: 80em;         /* tweak to taste */
   aspect-ratio: 4 / 3;      /* keeps consistent height */
   overflow: hidden;
   border-radius: 10px;
