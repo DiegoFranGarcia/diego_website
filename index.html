@@ -7,230 +7,207 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="fade-container">
-            <h1 class="fade-text">WELCOME</h1>
-        </div>
-        <header style="display: flex; justify-content: space-around; align-items: center; padding: 1rem;">
-            <a href="#aboutMe" style="text-decoration: none; font-weight: bold;">About Me</a>
-            <a href="#projects" style="text-decoration: none; font-weight: bold;">Projects</a>
-            <a href="#trips" style="text-decoration: none; font-weight: bold;">Trips</a>
-        </header>
-        <div id="aboutMe">
-            <h2>All about Diego Garcia</h2>
+    <!-- Welcome Hero -->
+    <div class="fade-container">
+        <h1 class="fade-text">WELCOME</h1>
+    </div>
+
+    <!-- Navigation -->
+    <header id="navbar">
+        <a href="#aboutMe">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#trips">Trips</a>
+    </header>
+
+    <!-- About Section -->
+    <section id="aboutMe">
+        <h2>All about Diego Garcia</h2>
+        <div class="glass-card">
             <div class="about-container">
                 <img src="images/main/portrait.JPG" alt="Picture of myself" class="about-img">
                 <div class="about-text">
                     <p>
-                        I’m Diego Garcia, a Computer Science major at the University of Missouri – Columbia (Mizzou), 
+                        I'm Diego Garcia, a Computer Science major at the University of Missouri – Columbia (Mizzou), 
                         with a strong interest in Data Science, Machine Learning, and software development.
-                        <br>
-                        <br>
-                        Outside of my technical work, I’m a big fan of soccer, Mizzou sports, and sports in general — especially football and baseball.
+                    </p>
+                    <br>
+                    <p>
+                        Outside of my technical work, I'm a big fan of soccer, Mizzou sports, and sports in general – especially football and baseball.
                         I also enjoy traveling, staying active, cooking, exploring new technologies, and spending time with friends and family.
-                        <br>
-                        <br>
+                    </p>
+                    <br>
+                    <p>
                         Feel free to check out my Projects, Resume, or contact me if you would like to connect.
                     </p>
                     <div class="button-row">
                         <a href="images/main/Diego_Garcia_Resume.pdf" target="_blank" title="Diego's Resume" class="resume-button">View My Resume</a>
                         <a href="https://www.linkedin.com/in/diego-f-garciaa/" target="_blank">
-                            <img src="images/main/linkedinLogo.png" alt="LinkedIn Profile" width="50" class="linkedin">
+                            <img src="images/main/linkedinLogo.png" alt="LinkedIn Profile" class="social-icon">
                         </a>
                         <a href="https://github.com/DiegoFranGarcia/" target="_blank">
-                            <img src="images/main/github_logo.webp" alt="GitHub Profile" width="50" class="linkedin">
+                            <img src="images/main/github_logo.webp" alt="GitHub Profile" class="social-icon">
                         </a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Projects ----------------------------------------------------------->
-        <div id="projects">
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
         <h2>Projects</h2>
         <p>More details and information about my projects can be found through my GitHub</p>
         <br>
-        <!-- Project card: MLB Predictor --------------------------------------->
-        <section class="project-card" id="mlb-predictor">
-            <!-- Manual-control gallery -->
-            <div class="project-gallery">
-            <button class="proj-arrow proj-prev" aria-label="Previous slide">❮</button>
 
-            <img src="images/mlbpredictor/royals_win_pct.jpeg" alt="MLB Predictor Home" class="proj-slide active">
-            <img src="images/mlbpredictor/royals_era.jpeg" alt="MLB Predictor Home" class="proj-slide">
-            <img src="images/mlbpredictor/matrix_home.jpeg" alt="Standings Page" class="proj-slide">
-            <img src="images/mlbpredictor/matrix_away.jpeg" alt="Predictions Page" class="proj-slide">
-            <img src="images/mlbpredictor/home_ops.jpeg" alt="Teams Page" class="proj-slide">
-            <img src="images/mlbpredictor/home_era.jpeg" alt="Teams Page" class="proj-slide">
-            <img src="images/mlbpredictor/away_ops.jpeg" alt="Teams Page" class="proj-slide">
-            <img src="images/mlbpredictor/away_era.jpeg" alt="Teams Page" class="proj-slide">
-
-
-            <button class="proj-arrow proj-next" aria-label="Next slide">❯</button>
+        <!-- MLB Predictor -->
+        <div class="glass-card">
+            <div class="project-card">
+                <div class="project-gallery">
+                    <button class="proj-arrow proj-prev" aria-label="Previous slide">‹</button>
+                    <img src="images/mlbpredictor/royals_win_pct.jpeg" alt="MLB Predictor Home" class="proj-slide active">
+                    <img src="images/mlbpredictor/royals_era.jpeg" alt="MLB Predictor Home" class="proj-slide">
+                    <img src="images/mlbpredictor/matrix_home.jpeg" alt="Standings Page" class="proj-slide">
+                    <img src="images/mlbpredictor/matrix_away.jpeg" alt="Predictions Page" class="proj-slide">
+                    <img src="images/mlbpredictor/home_ops.jpeg" alt="Teams Page" class="proj-slide">
+                    <img src="images/mlbpredictor/home_era.jpeg" alt="Teams Page" class="proj-slide">
+                    <img src="images/mlbpredictor/away_ops.jpeg" alt="Teams Page" class="proj-slide">
+                    <img src="images/mlbpredictor/away_era.jpeg" alt="Teams Page" class="proj-slide">
+                    <button class="proj-arrow proj-next" aria-label="Next slide">›</button>
+                </div>
+                <div class="project-info">
+                    <h3>MLB Predictor</h3>
+                    <p>
+                        MLB Predictor is my first Machine Learning project, where I built a model to predict the outcomes of Major League Baseball games.
+                        It extracts data from the MLB API, using team-centric stats like ERA, OPS, and WHIP to inform its predictions. This was such an enjoyable project as I explored how to manipulate
+                        display data with different types of charts and graphs using the Matplotlib library. Pictured are some graphs I created using some of the data I extracted.
+                    </p>
+                </div>
             </div>
-
-            <div class="project-info">
-            <h3>MLB Predictor</h3>
-            <p>
-                MLB Predictor is my first Machine Learning project, where I built a model to predict the outcomes of Major League Baseball games.
-                It extracts data from the MLB API, using team-centric stats like ERA, OPS, and WHIP to inform its predictions. This was such an enjoyable project as I explored how to manipulate
-                display data with different types of charts and graphs using the Matplotlib library. Pictured are some graphs I created using some of the data I extracted. 
-            </p>
-            </div>
-        </section>
-        <br>
-        <!-- Project card: Stock Predictor --------------------------------------->
-        <section class="project-card" id="stock-predictor">
-        <div class="project-info">
-            <h3>Stock Predictor</h3>
-            <p>Stock Predictor is another Machine Learning project I built to follow and predict the S&P 500 index. I am planning to add more to this project by streaming live
-                data and incorporating real-time predictions, not just with the S&P 500, but with many more individual stocks as well. So far, this project predicts if the S&P 500 will go up or down
-                in the following day. The model uses historical price data, trading volume, and other relevant features like the rolling averages to make its predictions.
-            </p>
         </div>
 
-        <div class="project-gallery">
-            <button class="proj-arrow proj-prev" aria-label="Previous slide">❮</button>
-
-            <img src="images/stockpredictor/import_data.jpeg" alt="Import code" class="proj-slide active">
-            <img src="images/stockpredictor/sp500.jpeg" alt="S&P 500 chart" class="proj-slide">
-            <img src="images/stockpredictor/train_data.jpeg" alt="Train data code" class="proj-slide">
-            <img src="images/stockpredictor/backtest.jpeg" alt="Backtest code" class="proj-slide">
-
-            <button class="proj-arrow proj-next" aria-label="Next slide">❯</button>
-        </div>
-        </section>
-        <br>
-        <!-- Project card: QuizMe --------------------------------------------->
-        <section class="project-card" id="quizme">
-            <!-- Manual-control gallery -->
-            <div class="project-gallery">
-            <button class="proj-arrow proj-prev" aria-label="Previous slide">❮</button>
-
-            <img src="images/quizmeimages/home-page.jpeg"   alt="QuizMe Home"   class="proj-slide active">
-            <img src="images/quizmeimages/create-quiz.jpeg" alt="Create Quiz"  class="proj-slide">
-            <img src="images/quizmeimages/take-quiz.jpeg"   alt="Take Quiz"    class="proj-slide">
-            <img src="images/quizmeimages/results.jpeg"     alt="Results page" class="proj-slide">
-
-            <button class="proj-arrow proj-next" aria-label="Next slide">❯</button>
+        <!-- Stock Predictor -->
+        <div class="glass-card">
+            <div class="project-card">
+                <div class="project-info">
+                    <h3>Stock Predictor</h3>
+                    <p>Stock Predictor is another Machine Learning project I built to follow and predict the S&P 500 index. I am planning to add more to this project by streaming live
+                        data and incorporating real-time predictions, not just with the S&P 500, but with many more individual stocks as well. So far, this project predicts if the S&P 500 will go up or down
+                        in the following day. The model uses historical price data, trading volume, and other relevant features like the rolling averages to make its predictions.
+                    </p>
+                </div>
+                <div class="project-gallery">
+                    <button class="proj-arrow proj-prev" aria-label="Previous slide">‹</button>
+                    <img src="images/stockpredictor/import_data.jpeg" alt="Import code" class="proj-slide active">
+                    <img src="images/stockpredictor/sp500.jpeg" alt="S&P 500 chart" class="proj-slide">
+                    <img src="images/stockpredictor/train_data.jpeg" alt="Train data code" class="proj-slide">
+                    <img src="images/stockpredictor/backtest.jpeg" alt="Backtest code" class="proj-slide">
+                    <button class="proj-arrow proj-next" aria-label="Next slide">›</button>
+                </div>
             </div>
-            <div class="project-info">
-            <h3>QuizMe</h3>
-            <p>
-                QuizMe is a lightweight quiz-builder I developed with the MERN stack—
-                MongoDB, Express.js, React, and Node.js—that runs entirely in the
-                browser for a single user. It lets you design unlimited quizzes with
-                rich-text questions and multiple answer formats, take them instantly,
-                and receive immediate scores. Every attempt is stored in MongoDB so you
-                can revisit past results and track your progress over time. With a
-                responsive React interface and a clean Express API, QuizMe showcases my
-                ability to craft a focused full-stack app that delivers a streamlined,
-                self-contained learning tool without logins, sharing links, or external
-                services.
-            </p>
-            </div>
-        </section>
         </div>
-        <br>
-       <!-- Trips ---------------------------------------------------------------->
-        <div id="trips">
+
+        <!-- QuizMe -->
+        <div class="glass-card">
+            <div class="project-card">
+                <div class="project-gallery">
+                    <button class="proj-arrow proj-prev" aria-label="Previous slide">‹</button>
+                    <img src="images/quizmeimages/home-page.jpeg" alt="QuizMe Home" class="proj-slide active">
+                    <img src="images/quizmeimages/create-quiz.jpeg" alt="Create Quiz" class="proj-slide">
+                    <img src="images/quizmeimages/take-quiz.jpeg" alt="Take Quiz" class="proj-slide">
+                    <img src="images/quizmeimages/results.jpeg" alt="Results page" class="proj-slide">
+                    <button class="proj-arrow proj-next" aria-label="Next slide">›</button>
+                </div>
+                <div class="project-info">
+                    <h3>QuizMe</h3>
+                    <p>
+                        QuizMe is a lightweight quiz-builder I developed with the MERN stack—
+                        MongoDB, Express.js, React, and Node.js—that runs entirely in the
+                        browser for a single user. It lets you design unlimited quizzes with
+                        rich-text questions and multiple answer formats, take them instantly,
+                        and receive immediate scores. Every attempt is stored in MongoDB so you
+                        can revisit past results and track your progress over time. With a
+                        responsive React interface and a clean Express API, QuizMe showcases my
+                        ability to craft a focused full-stack app that delivers a streamlined,
+                        self-contained learning tool without logins, sharing links, or external
+                        services.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trips Section -->
+    <section id="trips">
         <h2>Trips</h2>
 
-            <!-- Trip card: Las Vegas ---------------------------------------------->
-            <section class="trip-card">
+        <div class="glass-card">
+            <div class="trip-card">
                 <div class="trip-info">
-                <h3>Las Vegas · May 2025</h3>
-                <p>
-                    Visited Las Vegas for the first time with my friends. Lost a large
-                    chunk of change in the casinos, but had a great time exploring the city
-                    and enjoying the nightlife.
-                </p>
+                    <h3>Las Vegas · May 2025</h3>
+                    <p>
+                        Visited Las Vegas for the first time with my friends. Lost a large
+                        chunk of change in the casinos, but had a great time exploring the city
+                        and enjoying the nightlife.
+                    </p>
                 </div>
-
-                <!-- Slideshow container -->
                 <div class="trip-slideshow" data-interval="3500">
-                <img src="images/vegasimages/vegas_photo1.jpeg" alt="Las Vegas" class="slide active">
-                <img src="images/vegasimages/vegas_photo2.jpeg" alt="Las Vegas" class="slide">
-                <img src="images/vegasimages/vegas_photo3.jpeg"  alt="Las Vegas" class="slide">
-                <img src="images/vegasimages/vegas_photo4.jpeg"  alt="Las Vegas" class="slide">
+                    <img src="images/vegasimages/vegas_photo1.jpeg" alt="Las Vegas" class="slide active">
+                    <img src="images/vegasimages/vegas_photo2.jpeg" alt="Las Vegas" class="slide">
+                    <img src="images/vegasimages/vegas_photo3.jpeg" alt="Las Vegas" class="slide">
+                    <img src="images/vegasimages/vegas_photo4.jpeg" alt="Las Vegas" class="slide">
                 </div>
-            </section>
-
-            <section class="trip-card">
-                <div class="trip-slideshow" data-interval="4000">
-                <img src="images/mexicoimages/mexico1.jpeg" alt="Mexico" class="slide active">
-                <img src="images/mexicoimages/mexico2.jpeg" alt="Mexico" class="slide">
-                <img src="images/mexicoimages/mexico3.jpeg" alt="Mexico" class="slide">
-                <img src="images/mexicoimages/mexico4.jpeg" alt="Mexico" class="slide">
-                <img src="images/mexicoimages/mexico5.jpeg" alt="Mexico" class="slide">
-                </div>
-
-                <div class="trip-info">
-                <h3>Mexico · June 2025</h3>
-                <p>
-                    I visit Mexico often, visiting my family in their small hometown. While on my trip, I celebrated my cousin's wedding
-                    and enjoyed the beach aftwards.  
-                </p>
-                </div>
-            </section>
-
-            <section class="trip-card">
-                <div class="trip-info">
-                <h3>Colombia · December 2025</h3>
-                <p>
-                    I traveled to Cali, Colombia to explore the culture and try new foods. While I was there, 
-                    I saw many beautiful sights and met a lot of friendly people.
-                </p>
-                </div>
-
-                <div class="trip-slideshow" data-interval="4000">
-                <img src="images/colombiaimages/colombia1.jpeg" alt="Colombia" class="slide active">
-                <img src="images/colombiaimages/colombia2.jpeg" alt="Colombia" class="slide">
-                <img src="images/colombiaimages/colombia3.jpeg" alt="Colombia" class="slide">
-                <img src="images/colombiaimages/colombia4.jpeg" alt="Colombia" class="slide">
-                <img src="images/colombiaimages/colombia5.jpeg" alt="Colombia" class="slide">
-                </div>
-
-            </section>
+            </div>
         </div>
-    <script>
-    /* Simple slideshow: cycles through .trip-slideshow elements -------------*/
-    document.querySelectorAll('.trip-slideshow').forEach(show => {
-    const slides   = Array.from(show.querySelectorAll('.slide'));
-    const interval = +show.dataset.interval || 4000;
-    let index = 0;
 
-    setInterval(() => {
-        slides[index].classList.remove('active');
-        index = (index + 1) % slides.length;
-        slides[index].classList.add('active');
-    }, interval);
-    });
-    </script>
-    <script>
-    /* Click-through gallery for every .project-gallery --------------------*/
-    document.querySelectorAll('.project-gallery').forEach(gallery => {
-    const slides = Array.from(gallery.querySelectorAll('.proj-slide'));
-    let idx = 0;
+        <div class="glass-card">
+            <div class="trip-card">
+                <div class="trip-slideshow" data-interval="4000">
+                    <img src="images/mexicoimages/mexico1.jpeg" alt="Mexico" class="slide active">
+                    <img src="images/mexicoimages/mexico2.jpeg" alt="Mexico" class="slide">
+                    <img src="images/mexicoimages/mexico3.jpeg" alt="Mexico" class="slide">
+                    <img src="images/mexicoimages/mexico4.jpeg" alt="Mexico" class="slide">
+                    <img src="images/mexicoimages/mexico5.jpeg" alt="Mexico" class="slide">
+                </div>
+                <div class="trip-info">
+                    <h3>Mexico · June 2025</h3>
+                    <p>
+                        I visit Mexico often, visiting my family in their small hometown. While on my trip, I celebrated my cousin's wedding
+                        and enjoyed the beach afterwards.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-    function go(n) {
-        slides[idx].classList.remove('active');
-        idx = (n + slides.length) % slides.length;
-        slides[idx].classList.add('active');
-    }
+        <div class="glass-card">
+            <div class="trip-card">
+                <div class="trip-info">
+                    <h3>Colombia · December 2025</h3>
+                    <p>
+                        I traveled to Cali, Colombia to explore the culture and try new foods. While I was there, 
+                        I saw many beautiful sights and met a lot of friendly people.
+                    </p>
+                </div>
+                <div class="trip-slideshow" data-interval="4000">
+                    <img src="images/colombiaimages/colombia1.jpeg" alt="Colombia" class="slide active">
+                    <img src="images/colombiaimages/colombia2.jpeg" alt="Colombia" class="slide">
+                    <img src="images/colombiaimages/colombia3.jpeg" alt="Colombia" class="slide">
+                    <img src="images/colombiaimages/colombia4.jpeg" alt="Colombia" class="slide">
+                    <img src="images/colombiaimages/colombia5.jpeg" alt="Colombia" class="slide">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    gallery.querySelector('.proj-prev').addEventListener('click', () => go(idx - 1));
-    gallery.querySelector('.proj-next').addEventListener('click', () => go(idx + 1));
-    });
-    </script>
-    </body>
+    <!-- Footer -->
     <footer class="site-footer">
         <p class="prayer">
             Lord Jesus Christ, Son of God, have mercy upon me, a sinner
         </p>
         <div class="footer-row">
-            <img src="images/main/Missouri-Tigers-logo.png" width="60">
-            <img src="images/main/raiders_logo.png" width="50">
-            <img src="images/main/Royals_logo.png" width="55" height="60">
-            <img src="images/main/Real_Madrid_CF.svg.png" width="45">
+            <img src="images/main/Missouri-Tigers-logo.png" width="60" alt="Mizzou">
+            <img src="images/main/raiders_logo.png" width="50" alt="Raiders">
+            <img src="images/main/Royals_logo.png" width="55" height="60" alt="Royals">
+            <img src="images/main/Real_Madrid_CF.svg.png" width="45" alt="Real Madrid">
         </div>
         <p>&copy; <span id="year"></span> Diego Garcia. All rights reserved.</p>
         <div class="footer-links">
@@ -239,7 +216,66 @@
             <a href="#trips">Trips</a>
         </div>
     </footer>
+
     <script>
+        // Update year
         document.getElementById("year").textContent = new Date().getFullYear();
-    </script>    
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Trip slideshows
+        document.querySelectorAll('.trip-slideshow').forEach(show => {
+            const slides = Array.from(show.querySelectorAll('.slide'));
+            const interval = +show.dataset.interval || 4000;
+            let index = 0;
+
+            setInterval(() => {
+                slides[index].classList.remove('active');
+                index = (index + 1) % slides.length;
+                slides[index].classList.add('active');
+            }, interval);
+        });
+
+        // Project galleries
+        document.querySelectorAll('.project-gallery').forEach(gallery => {
+            const slides = Array.from(gallery.querySelectorAll('.proj-slide'));
+            let idx = 0;
+
+            function go(n) {
+                slides[idx].classList.remove('active');
+                idx = (n + slides.length) % slides.length;
+                slides[idx].classList.add('active');
+            }
+
+            gallery.querySelector('.proj-prev').addEventListener('click', () => go(idx - 1));
+            gallery.querySelector('.proj-next').addEventListener('click', () => go(idx + 1));
+        });
+    </script>
+</body>
 </html>

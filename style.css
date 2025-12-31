@@ -1,322 +1,411 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   scroll-behavior: smooth;
 }
 
-body{
-    animation: bgFade 10s infinite ease-in-out;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    cursor: pointer;
-}
-header {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #1F1F1F ;
-    box-sizing: border-box;
-    margin: 0;
-    height: 3.5em; 
-    width: 100%; 
-    position: relative;
-    padding: .5rem;
-}
-header a {
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    font-size: 2em;
-
-}
-header a:hover {
-    color: #585656;
-}
-
-p{
-    color: rgb(255, 255, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size:1.3em;
-}
-
-h1{
-    color: rgb(255, 255, 255);
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    font-size:7em;
-    margin:0;
-    padding:0;
-    font-stretch:wider;
-}
-h2{
-    color: rgb(255, 255, 255);
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    font-size: 4em;
-}
-h3{
-    color: rgb(255, 255, 255);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size:2em;
-}
-.fade-container {
-    position: relative;
-    height: 100px;
-    overflow: hidden;
-}
-
-.fade-text {
-    opacity: 0;
-    text-align: center;
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    font-size: 7em;
-    color: white;
-    animation: fadeInOnce 7s ease-in-out forwards;
-}
-
-@keyframes fadeInOnce {
-    from { opacity: 0; }
-    to   { opacity: 1; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  animation: bgFade 10s infinite ease-in-out;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  overflow-x: hidden;
 }
 
 @keyframes bgFade {
-    0%   { background-color: #1A1F2B; }  
-    33%  { background-color: #2C3539; }  
-    66%  { background-color: #2C3E50; }  
-    100% { background-color: #1A1F2B; }
-  }
+  0%   { background-color: #1A1F2B; }  
+  33%  { background-color: #2C3539; }  
+  66%  { background-color: #2C3E50; }  
+  100% { background-color: #1A1F2B; }
+}
+
+/* Navigation */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(31, 31, 31, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  height: 3.5em;
+}
+
+header.scrolled {
+  background: rgba(31, 31, 31, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+header a {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  color: #fff;
+  font-weight: bold;
+  font-size: 2em;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+header a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #C0C0C0, #E8E8E8);
+  transition: width 0.3s ease;
+}
+
+header a:hover {
+  color: #C0C0C0;
+}
+
+header a:hover::after {
+  width: 100%;
+}
+
+/* Hero/Welcome Section */
+.fade-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.fade-text {
+  opacity: 0;
+  text-align: center;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: 7em;
+  color: white;
+  animation: fadeInOnce 7s ease-in-out forwards;
+}
+
+@keyframes fadeInOnce {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Section Styling */
+section {
+  padding: 6rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: 4em;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: #fff;
+}
+
+h3 {
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  color: #C0C0C0;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 1.1em;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Glass Card Design */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease;
+  margin-bottom: 2rem;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 40px rgba(192, 192, 192, 0.2);
+  border-color: rgba(192, 192, 192, 0.3);
+}
+
+/* About Section */
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-img {
+  width: 14em;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid rgba(192, 192, 192, 0.5);
+  box-shadow: 0 8px 32px rgba(192, 192, 192, 0.3);
+  transition: all 0.4s ease;
+}
+
+.about-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 48px rgba(192, 192, 192, 0.5);
+}
+
+.about-text {
+  max-width: 50em;
+  text-align: left;
+}
+
+.button-row {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
 
 .resume-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #3A4750;
-  color: white;
+  background: linear-gradient(135deg, #C0C0C0, #E8E8E8);
+  color: #1A1F2B;
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 700;
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(192, 192, 192, 0.4);
 }
+
 .resume-button:hover {
-    background-color: #4d555a;
-    transform: scale(1.05);
-}
-  
-@media (max-width: 768px) {
-    h1 {
-      font-size: 3em;
-    }
-  
-    header a {
-      font-size: 1.5em;
-    }
-  
-    .resume-button {
-      padding: 0.5rem 1rem;
-      font-size: 1em;
-    }
-    .about-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        text-align: center;
-    }
-  }
-  .about-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap; 
-    margin-top: 1rem;
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(192, 192, 192, 0.6);
 }
 
-.about-img {
-    width: 14em;
-    height: auto;
-    border-radius: 10px;
+.social-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-.about-text {
-    max-width: 50em;
-    text-align: left;
-}
-.button-row {
-    display: flex;
-    align-items: center;
-    gap: 1rem; 
-    margin-top: 1rem;
-    flex-wrap: wrap; 
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 8px 20px rgba(192, 192, 192, 0.4);
 }
 
-.linkedin {
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    border-radius: .5em;
-
-}
-.linkedin:hover {
-    transform: scale(1.05);
-}
-
-
-.site-footer {
-    background-color: #1F1F1F;
-    color: white;
-    padding: 1rem;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: 3rem;
-    border-top: 2px solid #333;
-}
-
-.site-footer p {
-    margin: 0.5rem 0;
-    color: rgb(255, 255, 255);
-}
-
-.footer-links {
-    margin-top: 0.5rem;
-}
-
-.footer-links a {
-    margin: 0 1rem;
-    color: white;
-    text-decoration: none;
-    font-family: Copperplate, "Copperplate Gothic Light", fantasy;
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-.footer-links a:hover {
-    color: #585656;
-}
-
-.footer-row{
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    flex-wrap: wrap;
-}
-
-.prayer{
-    justify-content: center; 
-    font-family:'Fantasy', 'Papyrus';
-    color: whitesmoke;
-}
-
-/* Trip card layout ------------------------------------------------------*/
-.trip-card {
+/* Project Cards */
+.project-card {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;          /* stacks on mobile */
-  margin: 2rem auto;
-  max-width: 90rem;
+  gap: 3rem;
+  flex-wrap: wrap;
 }
 
-/* Text column -----------------------------------------------------------*/
+.project-info,
 .trip-info {
   flex: 1 1 300px;
   min-width: 260px;
   text-align: left;
 }
 
-/* Slideshow frame -------------------------------------------------------*/
+.project-gallery,
 .trip-slideshow {
   position: relative;
   flex: 1 1 300px;
-  max-width: 80em;         /* tweak to taste */
-  aspect-ratio: 4 / 3;      /* keeps consistent height */
+  max-width: 43em;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
-  border-radius: 10px;
+  border-radius: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
-/* Individual slides -----------------------------------------------------*/
-.trip-slideshow .slide {
-  position: absolute;
-  inset: 0;                
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.trip-slideshow .active {
-  opacity: 1;
-}
-
-/* Mobile tweaks ---------------------------------------------------------*/
-@media (max-width: 768px) {
-  .trip-card {
-    flex-direction: column;
-  }
-  .trip-info { text-align: center; }
-}
-
-/* ---------- Project card layout (mirrors .trip-card) -----------------*/
-.project-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin: 2rem auto;
-  max-width: 90rem;
-}
-.project-info {
-  flex: 1 1 300px;
-  min-width: 260px;
-  text-align: left;
-}
-
-/* ---------- Gallery frame -------------------------------------------*/
-.project-gallery {
-  position: relative;
-  flex: 1 1 300px;
-  max-width: 43em;          /* tweak as you like */
-  aspect-ratio: 16 / 9;     /* widescreen */
-  overflow: hidden;
-  border-radius: 10px;
-}
-
-/* slides --------------------------------------------------------------*/
-.proj-slide {
+.proj-slide,
+.slide {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;          /* was cover */
-  background: #0d1117;          /* dark fallback behind letterbox bars */
+  object-fit: contain;
+  background: #0d1117;
   opacity: 0;
-  transition: opacity .4s ease-in-out;
+  transition: opacity 0.6s ease-in-out;
 }
 
-.proj-slide.active { opacity: 1; }
+.proj-slide.active,
+.slide.active {
+  opacity: 1;
+}
 
-/* arrows --------------------------------------------------------------*/
 .proj-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 2;
   border: none;
-  background: rgba(0,0,0,0.45);
-  color: #fff;
+  background: rgba(192, 192, 192, 0.8);
+  color: #1A1F2B;
   font-size: 2rem;
   line-height: 1;
   padding: 0.2em 0.4em;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
+
 .proj-prev { left: 0.4rem; }
 .proj-next { right: 0.4rem; }
-.proj-arrow:hover { background: rgba(0,0,0,0.65); }
 
-/* mobile tweak --------------------------------------------------------*/
+.proj-arrow:hover {
+  background: rgba(232, 232, 232, 1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Trip card specific */
+.trip-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.trip-slideshow {
+  max-width: 80em;
+  aspect-ratio: 4 / 3;
+}
+
+.trip-slideshow .slide {
+  object-fit: cover;
+}
+
+/* Footer */
+.site-footer {
+  background: rgba(31, 31, 31, 0.9);
+  backdrop-filter: blur(10px);
+  padding: 2rem 1rem;
+  text-align: center;
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  margin-top: 3rem;
+}
+
+.prayer {
+  font-family: 'Fantasy', 'Papyrus';
+  color: whitesmoke;
+  margin-bottom: 1rem;
+}
+
+.footer-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+
+.footer-row img {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+.footer-row img:hover {
+  transform: translateY(-5px) scale(1.1);
+  filter: drop-shadow(0 8px 16px rgba(192, 192, 192, 0.4));
+}
+
+.footer-links {
+  margin-top: 1rem;
+}
+
+.footer-links a {
+  margin: 0 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: Copperplate, "Copperplate Gothic Light", fantasy;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #C0C0C0;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
-  .project-card { flex-direction: column; }
-  .project-info { text-align: center; }
+  .fade-text {
+    font-size: 3em;
+  }
+
+  header {
+    padding: 0.5rem;
+  }
+
+  header a {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 2.5em;
+  }
+
+  section {
+    padding: 4rem 1.5rem;
+  }
+
+  .about-container,
+  .project-card,
+  .trip-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-text,
+  .project-info,
+  .trip-info {
+    text-align: center;
+  }
+
+  .button-row {
+    justify-content: center;
+  }
+
+  .glass-card {
+    padding: 1.5rem;
+  }
+
+  .resume-button {
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+  }
 }
