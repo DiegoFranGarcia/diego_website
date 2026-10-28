@@ -3,19 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/main/Missouri_Tigers_old_logo.svg.png" type="image/png">
+    <link rel="icon" href="images/main/wave_icon.webp" type="image/png">
     <title>Diego Garcia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Welcome Hero -->
-    <div class="fade-container">
-        <h1 class="fade-text">WELCOME</h1>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
-    </div>
-
     <!-- Navigation -->
     <header id="navbar">
         <a href="#aboutMe">About Me</a>
@@ -34,12 +29,10 @@
                         I'm Diego Garcia, a Computer Science major at the University of Missouri – Columbia (Mizzou), 
                         with a strong interest in Data Science, Machine Learning, and software development.
                     </p>
-                    <br>
                     <p>
                         Outside of my technical work, I'm a big fan of soccer, Mizzou sports, and sports in general – especially football and baseball.
                         I also enjoy traveling, staying active, cooking, exploring new technologies, and spending time with friends and family.
                     </p>
-                    <br>
                     <p>
                         Feel free to check out my Projects, Resume, or contact me if you would like to connect.
                     </p>
@@ -60,9 +53,9 @@
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <p>More details and information about my projects can be found through my GitHub</p>
-        <br>
+        <p class="section-subtitle">More details and information about my projects can be found through my GitHub</p>
 
+        <div class="card-grid">
         <div class="glass-card">
             <div class="project-card">
                 <div class="project-info">
@@ -159,12 +152,14 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
 
     <!-- Trips Section -->
     <section id="trips">
         <h2>Trips</h2>
 
+        <div class="card-grid">
         <div class="glass-card">
             <div class="trip-card">
                 <div class="trip-info">
@@ -227,9 +222,9 @@
                 <div class="trip-slideshow" data-interval="4000">
                     <img src="images/cincyimages/cincy1.jpeg" alt="Cincy" class="slide active">
                     <img src="images/cincyimages/cincy2.jpeg" alt="Cincy" class="slide">
-                    <img src="images/cincyimages/cincy3.jpeg" alt="Cincy" class="slide active">
+                    <img src="images/cincyimages/cincy3.jpeg" alt="Cincy" class="slide">
                     <img src="images/cincyimages/cincy4.jpeg" alt="Cincy" class="slide">
-                    <img src="images/cincyimages/cincy5.jpeg" alt="Cincy" class="slide active">
+                    <img src="images/cincyimages/cincy5.jpeg" alt="Cincy" class="slide">
                     <img src="images/cincyimages/cincy6.jpeg" alt="Cincy" class="slide">
                 </div>
                 <div class="trip-info">
@@ -241,7 +236,27 @@
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
+    <!-- Detail Modal -->
+    <div class="modal" id="detailModal" aria-hidden="true">
+        <div class="modal-backdrop" data-close></div>
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
+            <div class="modal-viewer">
+                <button class="modal-arrow modal-prev" type="button" aria-label="Previous photo">‹</button>
+                <img class="modal-image" src="" alt="">
+                <button class="modal-arrow modal-next" type="button" aria-label="Next photo">›</button>
+                <span class="modal-counter"></span>
+            </div>
+            <div class="modal-thumbs"></div>
+            <div class="modal-body">
+                <h3 id="modalTitle"></h3>
+                <div class="modal-text"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
