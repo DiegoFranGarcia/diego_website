@@ -468,50 +468,63 @@ body.modal-open {
   object-fit: contain;
 }
 
-.modal-close {
+.modal-close,
+.modal-arrow {
   position: absolute;
-  top: 0.75rem;
-  right: 0.75rem;
   z-index: 3;
-  width: 2.5rem;
-  height: 2.5rem;
-  border: none;
+  display: grid;
+  place-items: center;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 50%;
-  background: rgba(192, 192, 192, 0.9);
-  color: #1A1F2B;
-  font-size: 1.6rem;
-  line-height: 1;
+  background: rgba(15, 18, 26, 0.55);
+  backdrop-filter: blur(8px);
+  color: #fff;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, border-color 0.2s ease;
 }
 
-.modal-close:hover {
-  background: #E8E8E8;
+.modal-close svg,
+.modal-arrow svg {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.modal-close:hover,
+.modal-arrow:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+.modal-close {
+  top: 1rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.modal-close svg {
+  width: 18px;
+  height: 18px;
 }
 
 .modal-arrow {
-  position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 2;
-  border: none;
-  background: rgba(192, 192, 192, 0.8);
-  color: #1A1F2B;
-  font-size: 2rem;
-  line-height: 1;
-  padding: 0.2em 0.45em;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: background 0.2s ease;
+  width: 2.75rem;
+  height: 2.75rem;
 }
 
-.modal-arrow:hover {
-  background: #E8E8E8;
+.modal-arrow svg {
+  width: 20px;
+  height: 20px;
 }
 
-.modal-prev { left: 0.75rem; }
-.modal-next { right: 0.75rem; }
-
+.modal-prev { left: 1rem; }
+.modal-next { right: 1rem; }
 .modal-counter {
   position: absolute;
   bottom: 0.75rem;

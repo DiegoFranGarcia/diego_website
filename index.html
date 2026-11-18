@@ -243,12 +243,15 @@
     <div class="modal" id="detailModal" aria-hidden="true">
         <div class="modal-backdrop" data-close></div>
         <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-            <button class="modal-close" type="button" data-close aria-label="Close">&times;</button>
-            <div class="modal-viewer">
-                <button class="modal-arrow modal-prev" type="button" aria-label="Previous photo">‹</button>
-                <img class="modal-image" src="" alt="">
-                <button class="modal-arrow modal-next" type="button" aria-label="Next photo">›</button>
-                <span class="modal-counter"></span>
+            <button class="modal-close" type="button" data-close aria-label="Close">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+            </button>            <div class="modal-viewer">
+                <button class="modal-arrow modal-prev" type="button" aria-label="Previous photo">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+                </button>                <img class="modal-image" src="" alt="">
+                <button class="modal-arrow modal-next" type="button" aria-label="Next photo">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+                </button>                <span class="modal-counter"></span>
             </div>
             <div class="modal-thumbs"></div>
             <div class="modal-body">
